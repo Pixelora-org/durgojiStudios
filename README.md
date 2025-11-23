@@ -1,16 +1,38 @@
-<<<<<<< HEAD
+# Durgoji Studios
 
-  # Photo Studio Website
+Professional Photography & Creative Studio Services Website
 
-  This is a code bundle for Photo Studio Website. The original project is available at https://www.figma.com/design/SxKWJfbXII3L8b0HWZnUe0/Photo-Studio-Website.
+## Features
 
-  ## Running the code
+- Modern React + Vite setup
+- Image optimization (82% compression)
+- Responsive design
+- Cloudflare Pages ready
 
-  Run `npm i` to install the dependencies.
+## Running the code
 
-  Run `npm run dev` to start the development server.
-  
-=======
-# durgojistudios
-Photo Studi Application 
->>>>>>> cd055eabbd2c6983d15620535d8a47b53f00c9f4
+Run `npm install` to install the dependencies.
+
+Run `npm run dev` to start the development server.
+
+Run `npm run build` to build for production.
+
+## Deployment
+
+### Cloudflare Pages
+
+The project is configured for Cloudflare Pages. When connected via GitHub:
+
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Framework preset**: Vite
+
+Cloudflare Pages will automatically:
+- Compress images
+- Serve WebP/AVIF formats
+- Cache globally via CDN
+- Provide free SSL
+
+### Vercel
+
+Also configured for Vercel deployment with `vercel.json`.
