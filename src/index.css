@@ -71,7 +71,8 @@
     --color-gray-100: oklch(.967 .003 264.542);
     --color-black: #000;
     --color-white: #fff;
-    --spacing: .25rem;
+    --base-font-size: 16px;
+    --spacing: calc(.25 * var(--base-font-size));
     --container-lg: 32rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -2167,6 +2168,7 @@
 
 html {
   font-size: 16px !important;
+  font-size: var(--base-font-size) !important;
   -webkit-text-size-adjust: 100% !important;
   -moz-text-size-adjust: 100% !important;
   -ms-text-size-adjust: 100% !important;
@@ -2174,6 +2176,10 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   zoom: 1 !important;
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
 }
 
 body {
