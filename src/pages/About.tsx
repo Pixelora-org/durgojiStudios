@@ -38,9 +38,9 @@ export function About() {
       {/* Header */}
       <section className="py-16 px-6 lg:px-8 bg-[#0D0D0D] border-b border-white/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl mb-4 text-white">About Us</h1>
+          <h1 className="text-5xl md:text-6xl mb-4 text-white">We Frame Life's Precious Moments</h1>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Passionate photographers dedicated to capturing your most precious moments
+            Durgoji Studios blends art, technology, and emotion to craft visuals that speak louder than words.
           </p>
         </div>
       </section>
@@ -50,38 +50,36 @@ export function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl mb-6 text-white">Our Story</h2>
+              <h2 className="text-4xl md:text-5xl mb-6 text-white">We Frame Life's Precious Moments</h2>
               <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  Founded in 2015, LuxeStudio emerged from a simple passion: to freeze time and preserve
-                  life's most beautiful moments. What started as a small studio in New York has grown
-                  into a premier photography service trusted by hundreds of clients.
+                  Durgoji Studios blends art, technology, and emotion to craft visuals that speak louder than words.
                 </p>
                 <p>
-                  Our journey has been defined by our commitment to excellence and innovation. We believe
-                  that photography is more than just capturing images—it's about telling stories, evoking
-                  emotions, and creating timeless art that will be cherished for generations.
+                  With years of creative experience in photography and cinematography, we specialize in bringing your story to life — one frame at a time.
                 </p>
                 <p>
-                  Today, we're proud to offer a comprehensive range of photography services, from intimate
-                  portrait sessions to grand wedding celebrations. Every project receives our full creative
-                  attention and technical expertise.
+                  We go beyond the lens — understanding your personality, event, or brand to deliver visuals that truly connect.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="overflow-hidden rounded-2xl shadow-xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1553467140-9efb069c1140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoZXIlMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzYzMzcxOTM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="/images/_DSC9169.jpg"
                   alt="Behind the scenes"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
+                  fetchPriority="low"
                 />
               </div>
               <div className="overflow-hidden rounded-2xl shadow-xl mt-12">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1615458509633-f15b61bdacb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGVxdWlwbWVudCUyMHN0dWRpb3xlbnwxfHx8fDE3NjMzNzE5Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="/images/_DSC9201.jpg"
                   alt="Studio equipment"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
+                  fetchPriority="low"
                 />
               </div>
             </div>
@@ -106,48 +104,32 @@ export function About() {
         </div>
       </section>
 
-      {/* Lead Photographer */}
+      {/* Professional Photographer */}
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="overflow-hidden rounded-2xl shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1719257751404-1dea075324bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoZXIlMjBwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwxfHx8fDE3NjMzNzIxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Sarah Williams - Lead Photographer"
+                src="/images/_DSC9572.jpg"
+                alt="Professional Photographer"
                 className="w-full h-[600px] object-cover"
+                loading="lazy"
+                fetchPriority="low"
               />
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl mb-4 text-white">Meet Sarah Williams</h2>
-              <p className="text-xl text-[#F2C94C] mb-6">Lead Photographer & Founder</p>
+              <h2 className="text-4xl md:text-5xl mb-4 text-white">Professional Photographer</h2>
+              <p className="text-xl text-[#F2C94C] mb-6">Creative Studio Services</p>
               <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  With over a decade of experience in professional photography, Sarah has developed a
-                  unique style that blends classic elegance with modern creativity. Her work has been
-                  featured in numerous publications and exhibitions across the country.
+                  Our creative professionals bring years of experience to every project. We understand that every moment is unique, and we approach each shoot with fresh eyes and creative vision.
                 </p>
                 <p>
-                  Sarah's approach to photography is deeply personal. She believes in building genuine
-                  connections with her subjects, allowing their authentic personalities to shine through
-                  every image. This philosophy has earned her a loyal client base and numerous industry
-                  awards.
+                  We use modern equipment and cutting-edge editing tools to ensure fast turnaround with top-quality results. Our commitment to excellence means we don't just take pictures — we craft visual experiences.
                 </p>
                 <p>
-                  When she's not behind the camera, Sarah mentors aspiring photographers and contributes
-                  to the local art community. Her passion for the craft is matched only by her dedication
-                  to her clients' satisfaction.
+                  Whether you're an individual looking to capture special moments or a business needing professional visuals, we offer tailored packages designed to meet your specific needs and exceed your expectations.
                 </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <div className="bg-[#1A1A1A] rounded-xl px-4 py-2 text-white/80">
-                  • Master of Fine Arts in Photography
-                </div>
-                <div className="bg-[#1A1A1A] rounded-xl px-4 py-2 text-white/80">
-                  • Featured in Vogue
-                </div>
-                <div className="bg-[#1A1A1A] rounded-xl px-4 py-2 text-white/80">
-                  • 50+ Industry Awards
-                </div>
               </div>
             </div>
           </div>
@@ -158,9 +140,9 @@ export function About() {
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Our Values</h2>
+            <h2 className="text-4xl md:text-5xl mb-4 text-white">Why Choose Us</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              The principles that guide everything we do
+              Creative professionals with years of experience. Modern equipment & cutting-edge editing tools. Fast turnaround with top-quality results. Tailored packages for individuals & businesses.
             </p>
           </div>
 
@@ -194,23 +176,29 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1706824253369-01f14db0466e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwaG90b2dyYXBoeSUyMHN0dWRpb3xlbnwxfHx8fDE3NjMzNzAwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/insta post 2.jpg"
                 alt="Studio setup"
                 className="w-full h-80 object-cover"
+                loading="lazy"
+                fetchPriority="low"
               />
             </div>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1553467140-9efb069c1140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoZXIlMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzYzMzcxOTM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/_DSC0461.jpg"
                 alt="On location shoot"
                 className="w-full h-80 object-cover"
+                loading="lazy"
+                fetchPriority="low"
               />
             </div>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1615458509633-f15b61bdacb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGVxdWlwbWVudCUyMHN0dWRpb3xlbnwxfHx8fDE3NjMzNzE5Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/_DSC0520.jpg"
                 alt="Equipment and gear"
                 className="w-full h-80 object-cover"
+                loading="lazy"
+                fetchPriority="low"
               />
             </div>
           </div>

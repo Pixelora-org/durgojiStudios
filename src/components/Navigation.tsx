@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Camera, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function Navigation() {
@@ -23,10 +23,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-[#F2C94C] flex items-center justify-center group-hover:scale-105 transition-transform">
-              <Camera className="w-6 h-6 text-[#0D0D0D]" />
-            </div>
-            <span className="text-xl font-semibold text-white">LuxeStudio</span>
+            <span className="text-xl font-semibold text-white">Durgoji Studios</span>
           </Link>
 
           {/* Desktop Navigation */}

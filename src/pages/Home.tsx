@@ -1,97 +1,74 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
-import { Camera, Heart, Users, Briefcase, Star } from "lucide-react";
+import { Camera, Heart, Users, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const categories = [
   {
     id: "wedding",
-    title: "Wedding",
+    title: "Events & Weddings",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1758905728020-a888617aecd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcGhvdG9ncmFwaHklMjBlbGVnYW50fGVufDF8fHx8MTc2MzMyOTI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Timeless wedding memories",
+    image: "/images/card 001.jpg",
+    description: "Candid, cinematic, and emotional storytelling of your big day",
   },
   {
-    id: "portrait",
-    title: "Portrait",
-    icon: Users,
-    image: "https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MzI2MzI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Professional headshots",
-  },
-  {
-    id: "fashion",
-    title: "Fashion",
+    id: "product",
+    title: "Product Photography",
     icon: Camera,
-    image: "https://images.unsplash.com/photo-1627661364735-eab249361d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBtb2RlbHxlbnwxfHx8fDE3NjMzNTk0MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Editorial & commercial",
+    image: "/images/card 021.jpg",
+    description: "High-quality shots to elevate your brand and marketing visuals",
   },
   {
-    id: "family",
-    title: "Family",
+    id: "maternity",
+    title: "Maternity & Newborn",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1526560244950-1a3c1ace48f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwaG90b2dyYXBoeSUyMGhhcHB5fGVufDF8fHx8MTc2MzM3MTkzOHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Cherished family moments",
+    image: "/images/card 023.jpg",
+    description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery",
   },
   {
-    id: "corporate",
-    title: "Corporate",
+    id: "video",
+    title: "Video Editing",
     icon: Briefcase,
-    image: "https://images.unsplash.com/photo-1603201667493-4c2696de0b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBwaG90b2dyYXBoeSUyMGJ1c2luZXNzfGVufDF8fHx8MTc2MzM3MTkzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Business events & teams",
+    image: "/images/_DSC0461.jpg",
+    description: "Turn raw clips into polished, engaging stories",
+  },
+  {
+    id: "web",
+    title: "Web Design",
+    icon: Briefcase,
+    image: "/images/_DSC0520.jpg",
+    description: "Build modern, responsive websites that reflect your brand",
   },
 ];
 
 const featuredWork = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1758905728020-a888617aecd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcGhvdG9ncmFwaHklMjBlbGVnYW50fGVufDF8fHx8MTc2MzMyOTI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Emma & James Wedding",
-    category: "Wedding",
+    image: "/images/_DSC1014.jpg",
+    title: "Wedding Celebration",
+    category: "Events & Weddings",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MzI2MzI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Corporate Headshots",
-    category: "Portrait",
+    image: "/images/_DSC1142.jpg",
+    title: "Professional Photography",
+    category: "Product Photography",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1627661364735-eab249361d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBtb2RlbHxlbnwxfHx8fDE3NjMzNTk0MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Editorial Fashion",
-    category: "Fashion",
+    image: "/images/_DSC5811.jpg",
+    title: "Creative Studio Services",
+    category: "Video Editing",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1526560244950-1a3c1ace48f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwaG90b2dyYXBoeSUyMGhhcHB5fGVufDF8fHx8MTc2MzM3MTkzOHww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "The Anderson Family",
-    category: "Family",
+    image: "/images/_DSC7999.jpg",
+    title: "Maternity & Newborn",
+    category: "Maternity & Newborn",
   },
 ];
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "Bride",
-    content: "LuxeStudio captured our wedding day perfectly. Every moment was beautifully preserved. The team was professional, creative, and made us feel so comfortable.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "CEO",
-    content: "Outstanding corporate photography services. They understand business needs and deliver exceptional results every time. Highly recommend for professional shoots.",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    role: "Model",
-    content: "The best fashion photography experience I've had. The creative vision and attention to detail are unmatched. My portfolio has never looked better!",
-    rating: 5,
-  },
-];
 
 export function Home() {
   return (
@@ -100,20 +77,21 @@ export function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1706824253369-01f14db0466e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwaG90b2dyYXBoeSUyMHN0dWRpb3xlbnwxfHx8fDE3NjMzNzAwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/images/web  2.jpg"
             alt="Professional Photography Studio"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/50 to-[#0D0D0D]" />
         </div>
         
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl mb-6 text-white">
-            Capturing Moments That Last Forever  
-            
+            Capture Your Perfect Moment
           </h1>
           <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto">
-            Premium photography services for weddings, portraits, fashion, and more
+            Every photograph tells a story — your story. From weddings and portraits to creative commercial shoots, we capture every smile, every detail, and every emotion with artistic precision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
@@ -134,9 +112,9 @@ export function Home() {
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Our Services</h2>
+            <h2 className="text-4xl md:text-5xl mb-4 text-white">Our Studio Services</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Specializing in various photography styles to meet your unique needs
+              Your vision deserves to be seen. We specialize in modern photography that blends creativity, technology, and style to deliver stunning visuals.
             </p>
           </div>
 
@@ -149,6 +127,8 @@ export function Home() {
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      fetchPriority="low"
                     />
                   </div>
                   <div className="p-6">
@@ -174,6 +154,8 @@ export function Home() {
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      fetchPriority="low"
                     />
                   </div>
                   <div className="p-6">
@@ -196,9 +178,9 @@ export function Home() {
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Featured Work</h2>
+            <h2 className="text-4xl md:text-5xl mb-4 text-white">Our Creative Expertise</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              A showcase of our recent photography projects
+              Professional photography that captures your perfect moments
             </p>
           </div>
 
@@ -211,6 +193,8 @@ export function Home() {
                       src={work.image}
                       alt={work.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      fetchPriority="low"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -238,27 +222,18 @@ export function Home() {
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Client Testimonials</h2>
+            <h2 className="text-4xl md:text-5xl mb-4 text-white">Why Choose Us</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              What our clients say about working with us
+              Creative professionals with years of experience. Modern equipment & cutting-edge editing tools. Fast turnaround with top-quality results. Tailored packages for individuals & businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="bg-[#1A1A1A] border-white/10 rounded-2xl p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#F2C94C] text-[#F2C94C]" />
-                  ))}
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">"{testimonial.content}"</p>
-                <div>
-                  <p className="text-white">{testimonial.name}</p>
-                  <p className="text-white/60">{testimonial.role}</p>
-                </div>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-[#1A1A1A] border-white/10 rounded-2xl p-12 text-center">
+              <p className="text-3xl md:text-4xl text-white/90 mb-6 leading-relaxed italic">
+                "We don't just take pictures — we craft visual experiences."
+              </p>
+            </Card>
           </div>
         </div>
       </section>

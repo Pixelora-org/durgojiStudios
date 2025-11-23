@@ -136,11 +136,9 @@ export function Contact() {
                       <MapPin className="w-6 h-6 text-[#F2C94C]" />
                     </div>
                     <div>
-                      <h3 className="text-xl text-white mb-2">Address</h3>
+                      <h3 className="text-xl text-white mb-2">Website</h3>
                       <p className="text-white/60">
-                        123 Photography Lane<br />
-                        New York, NY 10001<br />
-                        United States
+                        www.durgojistudios.com.au
                       </p>
                     </div>
                   </div>
@@ -153,7 +151,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl text-white mb-2">Phone</h3>
-                      <p className="text-white/60">(555) 123-4567</p>
+                      <p className="text-white/60">+61 469770248</p>
                     </div>
                   </div>
                 </Card>
@@ -165,7 +163,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl text-white mb-2">Email</h3>
-                      <p className="text-white/60">info@luxestudio.com</p>
+                      <p className="text-white/60">durgojiraosofficial@gmail.com</p>
                     </div>
                   </div>
                 </Card>
@@ -194,18 +192,16 @@ export function Contact() {
       {/* Map Section */}
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl mb-8 text-white text-center">Visit Our Studio</h2>
+          <h2 className="text-3xl md:text-4xl mb-8 text-white text-center">For More Information</h2>
           <div className="rounded-2xl overflow-hidden shadow-2xl h-[500px] bg-[#1A1A1A] flex items-center justify-center border border-white/10">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9476519598093!2d-73.99185492346067!3d40.742054571427615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c6b5%3A0x35b1cfbc89a6097f!2sMadison%20Square%20Garden!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Studio Location"
-            />
+            <div className="text-center p-12">
+              <h3 className="text-3xl text-white mb-6">Get in Touch</h3>
+              <div className="space-y-4 text-white/80 text-lg">
+                <p><strong>Phone:</strong> +61 469770248</p>
+                <p><strong>Email:</strong> durgojiraosofficial@gmail.com</p>
+                <p><strong>Website:</strong> www.durgojistudios.com.au</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

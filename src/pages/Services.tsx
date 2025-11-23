@@ -7,121 +7,104 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const services = [
   {
     id: 1,
-    title: "Wedding Photography",
+    title: "Events & Weddings Shooting",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1758905728020-a888617aecd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcGhvdG9ncmFwaHklMjBlbGVnYW50fGVufDF8fHx8MTc2MzMyOTI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Capture every precious moment of your special day with our premium wedding photography services.",
+    image: "/images/card 001.jpg",
+    description: "Candid, cinematic, and emotional storytelling of your big day. Capture cinematic moments with creative lighting and motion.",
     features: [
-      "Full day coverage",
-      "Engagement session included",
+      "Full event coverage",
+      "Cinematic storytelling",
+      "Creative lighting",
       "Professional editing",
-      "Online gallery",
-      "Print rights included",
+      "Online gallery access",
     ],
   },
   {
     id: 2,
-    title: "Portrait Photography",
-    icon: Users,
-    image: "https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MzI2MzI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Professional headshots and portrait sessions for individuals and professionals.",
+    title: "Product Photography",
+    icon: Camera,
+    image: "/images/card 021.jpg",
+    description: "High-quality shots to elevate your brand and marketing visuals.",
     features: [
-      "Studio or outdoor location",
-      "Multiple outfit changes",
-      "Professional retouching",
-      "Digital files included",
-      "Same-day turnaround available",
+      "Studio or location shoots",
+      "Professional lighting setup",
+      "Brand-focused imagery",
+      "High-resolution files",
+      "Quick turnaround",
     ],
   },
   {
     id: 3,
-    title: "Fashion Photography",
-    icon: Camera,
-    image: "https://images.unsplash.com/photo-1627661364735-eab249361d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBtb2RlbHxlbnwxfHx8fDE3NjMzNTk0MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Editorial and commercial fashion photography for brands and models.",
+    title: "Maternity & Newborn Shoots",
+    icon: Heart,
+    image: "/images/card 023.jpg",
+    description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery.",
     features: [
-      "Creative direction",
-      "Professional styling",
-      "High-end retouching",
-      "Portfolio development",
-      "Commercial licensing",
+      "Gentle, comfortable sessions",
+      "Natural and posed options",
+      "Family inclusion welcome",
+      "Timeless editing style",
+      "Digital gallery included",
     ],
   },
   {
     id: 4,
-    title: "Family Photography",
+    title: "Video Editing",
     icon: Home,
-    image: "https://images.unsplash.com/photo-1526560244950-1a3c1ace48f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwaG90b2dyYXBoeSUyMGhhcHB5fGVufDF8fHx8MTc2MzM3MTkzOHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Create lasting memories with beautiful family photography sessions.",
+    image: "/images/_DSC8145.jpg",
+    description: "Turn raw clips into polished, engaging stories.",
     features: [
-      "Outdoor or studio sessions",
-      "All ages welcome",
-      "Multiple locations",
-      "Prints & albums available",
-      "Extended family sessions",
+      "Professional color grading",
+      "Smooth transitions",
+      "Music & sound design",
+      "Multiple format delivery",
+      "Revision rounds included",
     ],
   },
   {
     id: 5,
-    title: "Corporate Photography",
-    icon: Briefcase,
-    image: "https://images.unsplash.com/photo-1603201667493-4c2696de0b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBwaG90b2dyYXBoeSUyMGJ1c2luZXNzfGVufDF8fHx8MTc2MzM3MTkzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Professional photography for corporate events, headshots, and brand content.",
+    title: "Instant Photo Download",
+    icon: Users,
+    image: "/images/_DSC8211.jpg",
+    description: "Let guests view and download photos instantly during the event.",
     features: [
-      "Event coverage",
-      "Team headshots",
-      "Brand photography",
-      "Quick turnaround",
-      "Volume discounts",
+      "Real-time photo upload",
+      "Instant sharing platform",
+      "Guest access portal",
+      "Social media ready",
+      "High-resolution downloads",
+    ],
+  },
+  {
+    id: 6,
+    title: "Live Streaming of Events",
+    icon: Briefcase,
+    image: "/images/_DSC8234.jpg",
+    description: "Broadcast your special moments in real time with professional quality.",
+    features: [
+      "HD quality streaming",
+      "Multi-platform support",
+      "Professional audio setup",
+      "Real-time engagement",
+      "Recording included",
+    ],
+  },
+  {
+    id: 7,
+    title: "Web Design",
+    icon: Briefcase,
+    image: "/images/_DSC9134.jpg",
+    description: "Build modern, responsive websites that reflect your brand.",
+    features: [
+      "Responsive design",
+      "SEO optimized",
+      "Fast loading times",
+      "Mobile-friendly",
+      "Custom branding",
     ],
   },
 ];
 
-const pricingPlans = [
-  {
-    id: 1,
-    name: "Essential",
-    price: "$499",
-    description: "Perfect for small sessions and individual portraits",
-    features: [
-      "1-hour session",
-      "1 location",
-      "20 edited photos",
-      "Online gallery",
-      "Digital download",
-    ],
-  },
-  {
-    id: 2,
-    name: "Premium",
-    price: "$999",
-    popular: true,
-    description: "Ideal for events and family sessions",
-    features: [
-      "3-hour session",
-      "2 locations",
-      "50 edited photos",
-      "Online gallery",
-      "Digital download",
-      "10 prints included",
-    ],
-  },
-  {
-    id: 3,
-    name: "Luxury",
-    price: "$2,499",
-    description: "Complete coverage for weddings and special events",
-    features: [
-      "Full day coverage",
-      "Unlimited locations",
-      "100+ edited photos",
-      "Online gallery",
-      "Digital download",
-      "Premium photo album",
-      "Engagement session",
-    ],
-  },
-];
 
 export function Services() {
   return (
@@ -129,9 +112,9 @@ export function Services() {
       {/* Header */}
       <section className="py-16 px-6 lg:px-8 bg-[#0D0D0D] border-b border-white/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl mb-4 text-white">Our Services</h1>
+          <h1 className="text-5xl md:text-6xl mb-4 text-white">Our Studio Services</h1>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Professional photography services tailored to your unique needs
+            Your vision deserves to be seen. We specialize in modern photography that blends creativity, technology, and style to deliver stunning visuals.
           </p>
         </div>
       </section>
@@ -152,6 +135,8 @@ export function Services() {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-[500px] object-cover"
+                    loading="lazy"
+                    fetchPriority="low"
                   />
                 </div>
               </div>
@@ -184,69 +169,12 @@ export function Services() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Pricing Plans</h2>
-            <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Choose the perfect package for your photography needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan) => (
-              <Card
-                key={plan.id}
-                className={`relative bg-[#1A1A1A] border rounded-2xl p-8 ${
-                  plan.popular
-                    ? "border-[#F2C94C] ring-2 ring-[#F2C94C]/20 scale-105"
-                    : "border-white/10"
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#F2C94C] text-[#0D0D0D] px-4 py-1 rounded-full text-sm">
-                    Most Popular
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl text-white mb-2">{plan.name}</h3>
-                  <div className="text-5xl text-[#F2C94C] mb-2">{plan.price}</div>
-                  <p className="text-white/60">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-white/80">
-                      <div className="w-5 h-5 rounded-full bg-[#F2C94C]/20 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-[#F2C94C]" />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact">
-                  <Button
-                    className={`w-full ${
-                      plan.popular
-                        ? "bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D]"
-                        : "bg-white/10 hover:bg-white/20 text-white"
-                    }`}
-                  >
-                    Get Started
-                  </Button>
-                </Link>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl mb-6 text-white">Ready to Book a Photoshoot?</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-white">Ready to Capture Your Perfect Moment?</h2>
           <p className="text-xl text-white/60 mb-8 max-w-2xl mx-auto">
-            Let's create something beautiful together. Contact us today to discuss your photography needs.
+            Let's create something beautiful together. Contact us today to discuss your photography and creative needs.
           </p>
           <Link to="/contact">
             <Button size="lg" className="bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D] px-8 py-6">
