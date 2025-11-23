@@ -32,6 +32,26 @@
         text-size-adjust: 100% !important;
       }
     </style>
+    <script>
+      (function() {
+        // Force correct font-size and prevent scaling
+        document.documentElement.style.fontSize = '16px';
+        document.body.style.fontSize = '16px';
+        document.body.style.transform = 'scale(1)';
+        document.body.style.zoom = '1';
+        document.documentElement.style.zoom = '1';
+        
+        // Keep it locked
+        setInterval(function() {
+          if (document.documentElement.style.fontSize !== '16px') {
+            document.documentElement.style.fontSize = '16px';
+          }
+          if (document.body.style.fontSize !== '16px') {
+            document.body.style.fontSize = '16px';
+          }
+        }, 100);
+      })();
+    </script>
     <title>Durgoji Studios - Professional Photography & Creative Studio Services</title>
   </head>
 
