@@ -65,7 +65,8 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build",
+            "build": "vite build && npm run build:cloudflare",
+            "build:cloudflare": "node scripts/copy-build.js",
             "preview": "vite preview",
             "pages:deploy": "exit 0"
       }
