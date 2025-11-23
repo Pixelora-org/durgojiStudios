@@ -60,14 +60,11 @@
             "tailwindcss": "^4.1.17",
             "typescript": "^5.9.3",
             "vite": "6.3.5",
-            "vite-plugin-image-optimizer": "^2.0.3",
-            "wrangler": "^4.50.0"
+            "vite-plugin-image-optimizer": "^2.0.3"
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build && npm run build:cloudflare",
-            "build:cloudflare": "node scripts/copy-build.js",
-            "preview": "vite preview",
-            "pages:deploy": "exit 0"
+            "build": "vite build",
+            "preview": "vite preview"
       }
 }

@@ -1,8 +1,4 @@
 .vercel
-.wrangler
 dist
-# Build artifacts copied to root (created during build)
-/assets
-/images
-index.html
-_redirects
+build
+node_modules
