@@ -2157,18 +2157,34 @@
   --sidebar-ring: oklch(.439 0 0);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
-  font-size: var(--font-size);
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 @property --tw-translate-x {
