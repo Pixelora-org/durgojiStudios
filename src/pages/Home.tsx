@@ -74,22 +74,23 @@ export function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 w-full h-full">
-          <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full">
+      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
+        <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+          <div className="absolute inset-0 w-full h-full">
             <ImageWithFallback
               src="/images/_DSC9134.jpg"
               alt="Professional Photography Studio"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center object-[center_top]"
               loading="eager"
               fetchPriority="high"
               style={{ 
                 width: '100%', 
                 height: '100%', 
                 display: 'block',
+                objectFit: 'cover',
                 objectPosition: 'center top',
-                maxWidth: '100%',
-                maxHeight: '100%'
+                maxWidth: '100vw',
+                maxHeight: '100vh'
               }}
             />
           </div>
