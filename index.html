@@ -34,22 +34,37 @@
     </style>
     <script>
       (function() {
-        // Force correct font-size and prevent scaling
-        document.documentElement.style.fontSize = '16px';
-        document.body.style.fontSize = '16px';
-        document.body.style.transform = 'scale(1)';
-        document.body.style.zoom = '1';
-        document.documentElement.style.zoom = '1';
+        // Force correct font-size and prevent scaling - run immediately
+        if (document.documentElement) {
+          document.documentElement.style.setProperty('font-size', '16px', 'important');
+          document.documentElement.style.setProperty('zoom', '1', 'important');
+          document.documentElement.style.setProperty('transform', 'scale(1)', 'important');
+        }
         
-        // Keep it locked
-        setInterval(function() {
-          if (document.documentElement.style.fontSize !== '16px') {
-            document.documentElement.style.fontSize = '16px';
+        // Run on DOM ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.style.setProperty('font-size', '16px', 'important');
+            document.body.style.setProperty('font-size', '16px', 'important');
+          });
+        } else {
+          if (document.body) {
+            document.body.style.setProperty('font-size', '16px', 'important');
           }
-          if (document.body.style.fontSize !== '16px') {
-            document.body.style.fontSize = '16px';
+        }
+        
+        // Force on load
+        window.addEventListener('load', function() {
+          document.documentElement.style.setProperty('font-size', '16px', 'important');
+          if (document.body) {
+            document.body.style.setProperty('font-size', '16px', 'important');
           }
-        }, 100);
+          // Force computed style
+          var htmlStyle = window.getComputedStyle(document.documentElement);
+          if (htmlStyle.fontSize !== '16px') {
+            document.documentElement.style.setProperty('font-size', '16px', 'important');
+          }
+        });
       })();
     </script>
     <title>Durgoji Studios - Professional Photography & Creative Studio Services</title>
