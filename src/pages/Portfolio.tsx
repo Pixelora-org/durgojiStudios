@@ -78,6 +78,72 @@ const portfolioImages = [
     category: "TV Show",
     title: "TV Show Production",
   },
+  {
+    id: 13,
+    src: "/images/_DSC9201.jpg",
+    category: "Photography",
+    title: "Professional Photography",
+  },
+  {
+    id: 14,
+    src: "/images/_DSC9572.jpg",
+    category: "Creative",
+    title: "Creative Artwork",
+  },
+  {
+    id: 15,
+    src: "/images/_DSC0461.jpg",
+    category: "TV Show",
+    title: "TV Show Scene",
+  },
+  {
+    id: 16,
+    src: "/images/_DSC0520.jpg",
+    category: "Photography",
+    title: "Portrait Session",
+  },
+  {
+    id: 17,
+    src: "/images/couples.png",
+    category: "Photography",
+    title: "Couples Photography",
+  },
+  {
+    id: 18,
+    src: "/images/couples2.png",
+    category: "Photography",
+    title: "Couples Portrait",
+  },
+  {
+    id: 19,
+    src: "/images/couples3.png",
+    category: "Creative",
+    title: "Creative Couples Shot",
+  },
+  {
+    id: 20,
+    src: "/images/baby.png",
+    category: "Photography",
+    title: "Baby Photography",
+  },
+  {
+    id: 21,
+    src: "/images/ear rings.png",
+    category: "Creative",
+    title: "Product Photography",
+  },
+  {
+    id: 22,
+    src: "/images/mehindi.png",
+    category: "Creative",
+    title: "Mehndi Photography",
+  },
+  {
+    id: 23,
+    src: "/images/shoe.png",
+    category: "Photography",
+    title: "Product Photography",
+  },
 ];
 
 const categories = ["All", "Creative", "TV Show", "Photography"];
