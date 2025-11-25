@@ -21,14 +21,14 @@ const portfolioImages = [
   {
     id: 3,
     src: "/images/card 021.jpg",
-    category: "General One",
-    title: "General Photography",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 4,
     src: "/images/_DSC1142.jpg",
     category: "Photography",
-    title: "Professional Photography",
+    title: "Portrait Photography",
   },
   {
     id: 5,
@@ -45,42 +45,42 @@ const portfolioImages = [
   {
     id: 7,
     src: "/images/card 023.jpg",
-    category: "General One",
-    title: "General Session",
+    category: "Creative",
+    title: "Creative Art Direction",
   },
   {
     id: 8,
     src: "/images/_DSC8145.jpg",
     category: "Photography",
-    title: "Portrait Photography",
+    title: "Studio Photography",
   },
   {
     id: 9,
     src: "/images/_DSC8211.jpg",
-    category: "Creative",
-    title: "Creative Art Direction",
-  },
-  {
-    id: 10,
-    src: "/images/_DSC8234.jpg",
     category: "TV Show",
     title: "TV Show Set",
   },
   {
+    id: 10,
+    src: "/images/_DSC8234.jpg",
+    category: "Photography",
+    title: "Professional Portrait",
+  },
+  {
     id: 11,
     src: "/images/_DSC9134.jpg",
-    category: "General One",
-    title: "General Photography Session",
+    category: "Creative",
+    title: "Creative Visual Storytelling",
   },
   {
     id: 12,
     src: "/images/_DSC9169.jpg",
-    category: "Photography",
-    title: "Studio Photography",
+    category: "TV Show",
+    title: "TV Show Production",
   },
 ];
 
-const categories = ["All", "Creative", "TV Show", "General One", "Photography"];
+const categories = ["All", "Creative", "TV Show", "Photography"];
 
 export function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
