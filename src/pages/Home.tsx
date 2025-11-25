@@ -1,44 +1,37 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
-import { Camera, Heart, Users, Briefcase } from "lucide-react";
+import { Camera, Heart, Users, Briefcase, Film, Sparkles, Image as ImageIcon } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const categories = [
   {
-    id: "wedding",
-    title: "Events & Weddings",
-    icon: Heart,
+    id: "creative",
+    title: "Creative",
+    icon: Sparkles,
     image: "/images/card 001.jpg",
-    description: "Candid, cinematic, and emotional storytelling of your big day",
+    description: "Innovative and artistic visual solutions for your creative projects",
   },
   {
-    id: "product",
-    title: "Product Photography",
-    icon: Camera,
+    id: "tv-show",
+    title: "TV Show",
+    icon: Film,
     image: "/images/card 021.jpg",
-    description: "High-quality shots to elevate your brand and marketing visuals",
+    description: "Professional production services for television shows and series",
   },
   {
-    id: "maternity",
-    title: "Maternity & Newborn",
-    icon: Heart,
+    id: "general",
+    title: "General One",
+    icon: ImageIcon,
     image: "/images/card 023.jpg",
-    description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery",
+    description: "Versatile photography and videography services for all occasions",
   },
   {
-    id: "video",
-    title: "Video Editing",
-    icon: Briefcase,
+    id: "photography",
+    title: "Photography",
+    icon: Camera,
     image: "/images/_DSC0461.jpg",
-    description: "Turn raw clips into polished, engaging stories",
-  },
-  {
-    id: "web",
-    title: "Web Design",
-    icon: Briefcase,
-    image: "/images/_DSC0520.jpg",
-    description: "Build modern, responsive websites that reflect your brand",
+    description: "High-quality photography services capturing your perfect moments",
   },
 ];
 
@@ -129,35 +122,8 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.slice(0, 3).map((category) => (
-              <Link to="/portfolio" key={category.id}>
-                <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithFallback
-                      src={category.image}
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      fetchPriority="low"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-lg bg-[#F2C94C]/10 flex items-center justify-center">
-                        <category.icon className="w-5 h-5 text-[#F2C94C]" />
-                      </div>
-                      <h3 className="text-2xl text-white">{category.title}</h3>
-                    </div>
-                    <p className="text-white/60">{category.description}</p>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {categories.slice(3, 5).map((category) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => (
               <Link to="/portfolio" key={category.id}>
                 <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
                   <div className="aspect-[4/3] overflow-hidden">
