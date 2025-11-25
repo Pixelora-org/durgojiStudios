@@ -155,6 +155,33 @@ export function Home() {
               </Link>
             ))}
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            {categories.slice(3, 5).map((category) => (
+              <Link to="/portfolio" key={category.id}>
+                <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <ImageWithFallback
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                      fetchPriority="low"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-[#F2C94C]/10 flex items-center justify-center">
+                        <category.icon className="w-5 h-5 text-[#F2C94C]" />
+                      </div>
+                      <h3 className="text-2xl text-white">{category.title}</h3>
+                    </div>
+                    <p className="text-white/60">{category.description}</p>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
