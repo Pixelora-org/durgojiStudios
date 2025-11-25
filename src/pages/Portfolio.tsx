@@ -9,78 +9,78 @@ const portfolioImages = [
   {
     id: 1,
     src: "/images/card 001.jpg",
-    category: "Wedding",
-    title: "Elegant Wedding Ceremony",
+    category: "Creative",
+    title: "Creative Visual Art",
   },
   {
     id: 2,
     src: "/images/_DSC1014.jpg",
-    category: "Wedding",
-    title: "Romantic Couple Portrait",
+    category: "TV Show",
+    title: "TV Show Production",
   },
   {
     id: 3,
     src: "/images/card 021.jpg",
-    category: "Portrait",
-    title: "Professional Headshot",
+    category: "General One",
+    title: "General Photography",
   },
   {
     id: 4,
     src: "/images/_DSC1142.jpg",
-    category: "Portrait",
-    title: "Creative Portrait Session",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 5,
     src: "/images/_DSC5811.jpg",
-    category: "Fashion",
-    title: "Fashion Editorial",
+    category: "Creative",
+    title: "Creative Studio Work",
   },
   {
     id: 6,
     src: "/images/_DSC7999.jpg",
-    category: "Fashion",
-    title: "High Fashion Shoot",
+    category: "TV Show",
+    title: "TV Show Behind Scenes",
   },
   {
     id: 7,
     src: "/images/card 023.jpg",
-    category: "Family",
-    title: "Happy Family Moments",
+    category: "General One",
+    title: "General Session",
   },
   {
     id: 8,
     src: "/images/_DSC8145.jpg",
-    category: "Family",
-    title: "Outdoor Family Session",
+    category: "Photography",
+    title: "Portrait Photography",
   },
   {
     id: 9,
     src: "/images/_DSC8211.jpg",
-    category: "Corporate",
-    title: "Corporate Team Photo",
+    category: "Creative",
+    title: "Creative Art Direction",
   },
   {
     id: 10,
     src: "/images/_DSC8234.jpg",
-    category: "Portrait",
-    title: "Studio Portrait",
+    category: "TV Show",
+    title: "TV Show Set",
   },
   {
     id: 11,
     src: "/images/_DSC9134.jpg",
-    category: "Corporate",
-    title: "Professional Shoot",
+    category: "General One",
+    title: "General Photography Session",
   },
   {
     id: 12,
     src: "/images/_DSC9169.jpg",
-    category: "Fashion",
-    title: "Studio Fashion",
+    category: "Photography",
+    title: "Studio Photography",
   },
 ];
 
-const categories = ["All", "Wedding", "Portrait", "Fashion", "Family", "Corporate"];
+const categories = ["All", "Creative", "TV Show", "General One", "Photography"];
 
 export function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");

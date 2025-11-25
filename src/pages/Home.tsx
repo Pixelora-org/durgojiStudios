@@ -1,37 +1,44 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
-import { Camera, Heart, Users, Briefcase, Film, Sparkles, Image as ImageIcon } from "lucide-react";
+import { Camera, Heart, Users, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const categories = [
   {
-    id: "creative",
-    title: "Creative",
-    icon: Sparkles,
+    id: "wedding",
+    title: "Events & Weddings",
+    icon: Heart,
     image: "/images/card 001.jpg",
-    description: "Innovative and artistic visual solutions for your creative projects",
+    description: "Candid, cinematic, and emotional storytelling of your big day",
   },
   {
-    id: "tv-show",
-    title: "TV Show",
-    icon: Film,
-    image: "/images/card 021.jpg",
-    description: "Professional production services for television shows and series",
-  },
-  {
-    id: "general",
-    title: "General One",
-    icon: ImageIcon,
-    image: "/images/card 023.jpg",
-    description: "Versatile photography and videography services for all occasions",
-  },
-  {
-    id: "photography",
-    title: "Photography",
+    id: "product",
+    title: "Product Photography",
     icon: Camera,
+    image: "/images/card 021.jpg",
+    description: "High-quality shots to elevate your brand and marketing visuals",
+  },
+  {
+    id: "maternity",
+    title: "Maternity & Newborn",
+    icon: Heart,
+    image: "/images/card 023.jpg",
+    description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery",
+  },
+  {
+    id: "video",
+    title: "Video Editing",
+    icon: Briefcase,
     image: "/images/_DSC0461.jpg",
-    description: "High-quality photography services capturing your perfect moments",
+    description: "Turn raw clips into polished, engaging stories",
+  },
+  {
+    id: "web",
+    title: "Web Design",
+    icon: Briefcase,
+    image: "/images/_DSC0520.jpg",
+    description: "Build modern, responsive websites that reflect your brand",
   },
 ];
 
@@ -122,8 +129,8 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {categories.slice(0, 3).map((category) => (
               <Link to="/portfolio" key={category.id}>
                 <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
                   <div className="aspect-[4/3] overflow-hidden">
