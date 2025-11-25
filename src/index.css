@@ -74,12 +74,12 @@
     --base-font-size: 16px;
     --rem-base: 16px;
     --spacing: 4px;
-    --container-lg: 32rem;
-    --container-2xl: 42rem;
-    --container-3xl: 48rem;
-    --container-4xl: 56rem;
-    --container-5xl: 64rem;
-    --container-7xl: 80rem;
+    --container-lg: 512px;
+    --container-2xl: 672px;
+    --container-3xl: 768px;
+    --container-4xl: 896px;
+    --container-5xl: 1024px;
+    --container-7xl: 1280px;
     --text-sm: 14px;
     --text-sm--line-height: 1.25;
     --text-base: 16px;
@@ -2169,6 +2169,7 @@
 
 html {
   font-size: 16px !important;
+  font-size: 100% !important;
   -webkit-text-size-adjust: 100% !important;
   -moz-text-size-adjust: 100% !important;
   -ms-text-size-adjust: 100% !important;
@@ -2180,6 +2181,22 @@ html {
   -webkit-transform: scale(1) !important;
   -moz-transform: scale(1) !important;
   -ms-transform: scale(1) !important;
+}
+
+/* Force all rem-based calculations to use 16px base */
+html {
+  font-size: 16px !important;
+}
+
+/* Prevent any browser zoom or scaling */
+html, body {
+  -ms-zoom: 1 !important;
+  -moz-transform: scale(1) !important;
+  -moz-transform-origin: 0 0 !important;
+  -webkit-transform: scale(1) !important;
+  -webkit-transform-origin: 0 0 !important;
+  transform: scale(1) !important;
+  transform-origin: 0 0 !important;
 }
 
 body {

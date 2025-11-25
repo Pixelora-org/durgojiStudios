@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
       html {
@@ -34,35 +37,73 @@
     </style>
     <script>
       (function() {
-        // Force correct font-size and prevent scaling - run immediately
-        if (document.documentElement) {
-          document.documentElement.style.setProperty('font-size', '16px', 'important');
-          document.documentElement.style.setProperty('zoom', '1', 'important');
-          document.documentElement.style.setProperty('transform', 'scale(1)', 'important');
+        'use strict';
+        
+        // IMMEDIATE execution - before anything else loads
+        var root = document.documentElement;
+        if (root) {
+          root.style.setProperty('font-size', '16px', 'important');
+          root.style.setProperty('zoom', '1', 'important');
+          root.style.setProperty('-ms-zoom', '1', 'important');
+          root.style.setProperty('transform', 'scale(1)', 'important');
+          root.style.setProperty('-webkit-transform', 'scale(1)', 'important');
+          root.style.setProperty('-moz-transform', 'scale(1)', 'important');
         }
+        
+        // Function to lock font-size
+        function lockFontSize() {
+          var html = document.documentElement;
+          var body = document.body;
+          
+          if (html) {
+            html.style.setProperty('font-size', '16px', 'important');
+            html.style.setProperty('zoom', '1', 'important');
+            html.style.setProperty('-ms-zoom', '1', 'important');
+          }
+          
+          if (body) {
+            body.style.setProperty('font-size', '16px', 'important');
+            body.style.setProperty('zoom', '1', 'important');
+            body.style.setProperty('-ms-zoom', '1', 'important');
+          }
+          
+          // Check computed style and force if needed
+          if (html && window.getComputedStyle) {
+            var computed = window.getComputedStyle(html);
+            var fontSize = computed.fontSize;
+            if (fontSize && fontSize !== '16px' && fontSize !== '12pt') {
+              html.style.setProperty('font-size', '16px', 'important');
+            }
+          }
+        }
+        
+        // Run immediately
+        lockFontSize();
         
         // Run on DOM ready
         if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() {
-            document.documentElement.style.setProperty('font-size', '16px', 'important');
-            document.body.style.setProperty('font-size', '16px', 'important');
-          });
+          document.addEventListener('DOMContentLoaded', lockFontSize);
         } else {
-          if (document.body) {
-            document.body.style.setProperty('font-size', '16px', 'important');
-          }
+          lockFontSize();
         }
         
-        // Force on load
-        window.addEventListener('load', function() {
-          document.documentElement.style.setProperty('font-size', '16px', 'important');
-          if (document.body) {
-            document.body.style.setProperty('font-size', '16px', 'important');
+        // Run on load
+        window.addEventListener('load', lockFontSize);
+        
+        // Run periodically to prevent any changes
+        setInterval(lockFontSize, 50);
+        
+        // Prevent zoom via keyboard/mouse
+        document.addEventListener('wheel', function(e) {
+          if (e.ctrlKey) {
+            e.preventDefault();
           }
-          // Force computed style
-          var htmlStyle = window.getComputedStyle(document.documentElement);
-          if (htmlStyle.fontSize !== '16px') {
-            document.documentElement.style.setProperty('font-size', '16px', 'important');
+        }, { passive: false });
+        
+        document.addEventListener('keydown', function(e) {
+          if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+            e.preventDefault();
+            lockFontSize();
           }
         });
       })();
