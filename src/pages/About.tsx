@@ -5,7 +5,6 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const stats = [
   { icon: Camera, value: "10+", label: "Years Experience" },
   { icon: Heart, value: "500+", label: "Happy Clients" },
-  { icon: Award, value: "50+", label: "Awards Won" },
   { icon: Users, value: "1000+", label: "Events Covered" },
 ];
 
@@ -90,9 +89,9 @@ export function About() {
       {/* Stats */}
       <section className="py-16 px-6 lg:px-8 bg-[#1A1A1A]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center gap-16 lg:gap-24 xl:gap-32">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center min-w-[200px]">
                 <div className="w-16 h-16 rounded-xl bg-[#F2C94C]/10 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-[#F2C94C]" />
                 </div>

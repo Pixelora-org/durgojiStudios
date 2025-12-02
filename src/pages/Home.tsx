@@ -9,21 +9,21 @@ const categories = [
     id: "wedding",
     title: "Events & Weddings",
     icon: Heart,
-    image: "/images/card 001.jpg",
+    image: "/images/_DSC0520.jpg",
     description: "Candid, cinematic, and emotional storytelling of your big day",
   },
   {
     id: "product",
     title: "Product Photography",
     icon: Camera,
-    image: "/images/card 021.jpg",
+    image: "/images/ear rings.png",
     description: "High-quality shots to elevate your brand and marketing visuals",
   },
   {
     id: "maternity",
     title: "Maternity & Newborn",
     icon: Heart,
-    image: "/images/card 023.jpg",
+    image: "/images/_DSC1014.jpg",
     description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery",
   },
   {
@@ -37,7 +37,7 @@ const categories = [
     id: "web",
     title: "Web Design",
     icon: Briefcase,
-    image: "/images/_DSC0520.jpg",
+    image: "/images/web  2.jpg",
     description: "Build modern, responsive websites that reflect your brand",
   },
 ];
@@ -45,7 +45,7 @@ const categories = [
 const featuredWork = [
   {
     id: 1,
-    image: "/images/_DSC1014.jpg",
+    image: "/images/couples2.png",
     title: "Wedding Celebration",
     category: "Events & Weddings",
   },

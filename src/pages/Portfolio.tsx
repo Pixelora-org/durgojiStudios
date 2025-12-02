@@ -8,15 +8,15 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const portfolioImages = [
   {
     id: 1,
-    src: "/images/card 001.jpg",
+    src: "/images/web  2.jpg",
     category: "Creative",
-    title: "Creative Visual Art",
+    title: "Web Design",
   },
   {
     id: 2,
     src: "/images/_DSC1014.jpg",
-    category: "TV Show",
-    title: "TV Show Production",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 3,
@@ -32,9 +32,9 @@ const portfolioImages = [
   },
   {
     id: 5,
-    src: "/images/_DSC5811.jpg",
+    src: "/images/insta post 2.jpg",
     category: "Creative",
-    title: "Creative Studio Work",
+    title: "Instagram Post",
   },
   {
     id: 6,
@@ -44,9 +44,9 @@ const portfolioImages = [
   },
   {
     id: 7,
-    src: "/images/card 023.jpg",
-    category: "Creative",
-    title: "Creative Art Direction",
+    src: "/images/_DSC5811.jpg",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 8,
@@ -69,14 +69,14 @@ const portfolioImages = [
   {
     id: 11,
     src: "/images/_DSC9134.jpg",
-    category: "Creative",
-    title: "Creative Visual Storytelling",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 12,
     src: "/images/_DSC9169.jpg",
-    category: "TV Show",
-    title: "TV Show Production",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 13,
@@ -87,20 +87,20 @@ const portfolioImages = [
   {
     id: 14,
     src: "/images/_DSC9572.jpg",
-    category: "Creative",
-    title: "Creative Artwork",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 15,
     src: "/images/_DSC0461.jpg",
-    category: "TV Show",
-    title: "TV Show Scene",
+    category: "Photography",
+    title: "Professional Photography",
   },
   {
     id: 16,
     src: "/images/_DSC0520.jpg",
     category: "Photography",
-    title: "Portrait Session",
+    title: "Professional Photography",
   },
   {
     id: 17,
@@ -117,8 +117,8 @@ const portfolioImages = [
   {
     id: 19,
     src: "/images/couples3.png",
-    category: "Creative",
-    title: "Creative Couples Shot",
+    category: "Photography",
+    title: "Couples Photography",
   },
   {
     id: 20,
@@ -130,12 +130,12 @@ const portfolioImages = [
     id: 21,
     src: "/images/ear rings.png",
     category: "Creative",
-    title: "Product Photography",
+    title: "Creative Product Photography",
   },
   {
     id: 22,
     src: "/images/mehindi.png",
-    category: "Creative",
+    category: "Photography",
     title: "Mehndi Photography",
   },
   {
@@ -143,6 +143,18 @@ const portfolioImages = [
     src: "/images/shoe.png",
     category: "Photography",
     title: "Product Photography",
+  },
+  {
+    id: 24,
+    src: "/images/card 001.jpg",
+    category: "Photography",
+    title: "Professional Photography",
+  },
+  {
+    id: 25,
+    src: "/images/card 023.jpg",
+    category: "Photography",
+    title: "Professional Photography",
   },
 ];
 

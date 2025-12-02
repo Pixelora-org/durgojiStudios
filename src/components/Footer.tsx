@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Footer() {
@@ -9,41 +9,22 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-16 w-32 flex items-center justify-center overflow-hidden">
+            <div className="mb-4">
+              <div className="mb-3" style={{ maxWidth: '180px', maxHeight: '60px' }}>
                 <ImageWithFallback
-                  src="/images/logo.png"
+                  src="/images/logo2.jpg"
                   alt="Durgoji Studios Logo"
-                  className="max-h-full max-w-full object-contain"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                   fetchPriority="low"
+                  style={{ maxWidth: '100%', maxHeight: '60px', width: 'auto', height: 'auto' }}
                 />
               </div>
-              <span className="text-xl font-semibold text-white">Durgoji Studios</span>
+              <span className="text-xl font-semibold text-white block">Durgoji Studios</span>
             </div>
             <p className="text-white/60 mb-4">
               We Frame Life's Precious Moments. Blending art, technology, and emotion to craft visuals that speak louder than words.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#F2C94C] flex items-center justify-center transition-colors group"
-              >
-                <Instagram className="w-5 h-5 text-white group-hover:text-[#0D0D0D]" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#F2C94C] flex items-center justify-center transition-colors group"
-              >
-                <Facebook className="w-5 h-5 text-white group-hover:text-[#0D0D0D]" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#F2C94C] flex items-center justify-center transition-colors group"
-              >
-                <Twitter className="w-5 h-5 text-white group-hover:text-[#0D0D0D]" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}

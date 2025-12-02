@@ -9,7 +9,7 @@ const services = [
     id: 1,
     title: "Events & Weddings Shooting",
     icon: Heart,
-    image: "/images/card 001.jpg",
+    image: "/images/_DSC0520.jpg",
     description: "Candid, cinematic, and emotional storytelling of your big day. Capture cinematic moments with creative lighting and motion.",
     features: [
       "Full event coverage",
@@ -23,7 +23,7 @@ const services = [
     id: 2,
     title: "Product Photography",
     icon: Camera,
-    image: "/images/card 021.jpg",
+    image: "/images/ear rings.png",
     description: "High-quality shots to elevate your brand and marketing visuals.",
     features: [
       "Studio or location shoots",
@@ -37,7 +37,7 @@ const services = [
     id: 3,
     title: "Maternity & Newborn Shoots",
     icon: Heart,
-    image: "/images/card 023.jpg",
+    image: "/images/_DSC1014.jpg",
     description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery.",
     features: [
       "Gentle, comfortable sessions",
@@ -93,7 +93,7 @@ const services = [
     id: 7,
     title: "Web Design",
     icon: Briefcase,
-    image: "/images/_DSC9134.jpg",
+    image: "/images/web  2.jpg",
     description: "Build modern, responsive websites that reflect your brand.",
     features: [
       "Responsive design",
