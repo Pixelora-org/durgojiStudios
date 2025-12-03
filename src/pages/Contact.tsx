@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
@@ -6,12 +7,31 @@ import { Card } from "../components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export function Contact() {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+
+  useEffect(() => {
+    // Handle scroll to anchor when page loads with hash
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        // Small delay to ensure page is rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Adjust for fixed header offset
+          window.scrollBy(0, -80);
+        }, 100);
+      }
+    } else {
+      // Scroll to top if no hash
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -190,7 +210,7 @@ export function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
+      <section id="more-info" className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-8 text-white text-center">For More Information</h2>
           <div className="rounded-2xl overflow-hidden shadow-2xl h-[500px] bg-[#1A1A1A] flex items-center justify-center border border-white/10">
@@ -203,19 +223,6 @@ export function Contact() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl mb-6 text-white">Schedule Your Shoot</h2>
-          <p className="text-xl text-white/60 mb-8 max-w-2xl mx-auto">
-            Ready to create stunning photographs? Book your session today and let us capture your special moments.
-          </p>
-          <Button size="lg" className="bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D] px-8 py-6">
-            Book Your Session Now
-          </Button>
         </div>
       </section>
     </div>

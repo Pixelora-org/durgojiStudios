@@ -158,7 +158,7 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact">
+                <Link to="/contact#more-info">
                   <Button className="bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D]">
                     Book This Service
                   </Button>
