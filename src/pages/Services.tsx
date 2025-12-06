@@ -48,24 +48,10 @@ const services = [
     ],
   },
   {
-    id: 4,
-    title: "Video Editing",
-    icon: Home,
-    image: "/images/_DSC7999.jpg",
-    description: "Turn raw clips into polished, engaging stories.",
-    features: [
-      "Professional color grading",
-      "Smooth transitions",
-      "Music & sound design",
-      "Multiple format delivery",
-      "Revision rounds included",
-    ],
-  },
-  {
     id: 5,
     title: "Instant Photo Download",
     icon: Users,
-    image: "/images/_DSC9169.jpg",
+    image: "/images/couples3.png",
     description: "Let guests view and download photos instantly during the event.",
     features: [
       "Real-time photo upload",
@@ -79,7 +65,7 @@ const services = [
     id: 6,
     title: "Live Streaming of Events",
     icon: Briefcase,
-    image: "/images/_DSC9201.jpg",
+    image: "/images/mehindi.png",
     description: "Broadcast your special moments in real time with professional quality.",
     features: [
       "HD quality streaming",
@@ -93,7 +79,7 @@ const services = [
     id: 7,
     title: "Web Design",
     icon: Briefcase,
-    image: "/images/web  2.jpg",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
     description: "Build modern, responsive websites that reflect your brand.",
     features: [
       "Responsive design",
@@ -158,7 +144,7 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact#more-info">
+                <Link to="/contact">
                   <Button className="bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D]">
                     Book This Service
                   </Button>

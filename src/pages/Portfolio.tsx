@@ -7,20 +7,8 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const portfolioImages = [
   {
-    id: 1,
-    src: "/images/web  2.jpg",
-    category: "Creative",
-    title: "Web Design",
-  },
-  {
     id: 2,
     src: "/images/_DSC1014.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 3,
-    src: "/images/card 021.jpg",
     category: "Photography",
     title: "Professional Photography",
   },
@@ -29,36 +17,6 @@ const portfolioImages = [
     src: "/images/_DSC1142.jpg",
     category: "Photography",
     title: "Portrait Photography",
-  },
-  {
-    id: 5,
-    src: "/images/insta post 2.jpg",
-    category: "Creative",
-    title: "Instagram Post",
-  },
-  {
-    id: 6,
-    src: "/images/_DSC7999.jpg",
-    category: "TV Show",
-    title: "TV Show Behind Scenes",
-  },
-  {
-    id: 11,
-    src: "/images/_DSC9134.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 12,
-    src: "/images/_DSC9169.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 13,
-    src: "/images/_DSC9201.jpg",
-    category: "Photography",
-    title: "Professional Photography",
   },
   {
     id: 17,
@@ -102,21 +60,9 @@ const portfolioImages = [
     category: "Photography",
     title: "Product Photography",
   },
-  {
-    id: 24,
-    src: "/images/card 001.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 25,
-    src: "/images/card 023.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
 ];
 
-const categories = ["All", "Creative", "TV Show", "Photography"];
+const categories = ["All", "Creative", "Photography"];
 
 export function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");

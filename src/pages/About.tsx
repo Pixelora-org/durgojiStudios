@@ -65,7 +65,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-6">
               <div className="overflow-hidden rounded-2xl shadow-xl">
                 <ImageWithFallback
-                  src="/images/_DSC9169.jpg"
+                  src="/images/couples.png"
                   alt="Behind the scenes"
                   className="w-full h-64 object-cover"
                   loading="lazy"
@@ -74,7 +74,7 @@ export function About() {
               </div>
               <div className="overflow-hidden rounded-2xl shadow-xl mt-12">
                 <ImageWithFallback
-                  src="/images/_DSC9201.jpg"
+                  src="/images/couples2.png"
                   alt="Studio equipment"
                   className="w-full h-64 object-cover"
                   loading="lazy"
@@ -109,7 +109,7 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="overflow-hidden rounded-2xl shadow-2xl">
               <ImageWithFallback
-                src="/images/_DSC9134.jpg"
+                src="/images/_DSC1142.jpg"
                 alt="Professional Photographer"
                 className="w-full h-[600px] object-cover"
                 loading="lazy"
@@ -162,47 +162,6 @@ export function About() {
         </div>
       </section>
 
-      {/* Behind the Scenes */}
-      <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Behind the Scenes</h2>
-            <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              A glimpse into our creative process and studio environment
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="overflow-hidden rounded-2xl shadow-xl">
-              <ImageWithFallback
-                src="/images/insta post 2.jpg"
-                alt="Studio setup"
-                className="w-full h-80 object-cover"
-                loading="lazy"
-                fetchPriority="low"
-              />
-            </div>
-            <div className="overflow-hidden rounded-2xl shadow-xl">
-              <ImageWithFallback
-                src="/images/_DSC7999.jpg"
-                alt="On location shoot"
-                className="w-full h-80 object-cover"
-                loading="lazy"
-                fetchPriority="low"
-              />
-            </div>
-            <div className="overflow-hidden rounded-2xl shadow-xl">
-              <ImageWithFallback
-                src="/images/_DSC9169.jpg"
-                alt="Equipment and gear"
-                className="w-full h-80 object-cover"
-                loading="lazy"
-                fetchPriority="low"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

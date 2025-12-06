@@ -27,48 +27,20 @@ const categories = [
     description: "Celebrate the joy of new beginnings with warm, emotional, and timeless imagery",
   },
   {
-    id: "video",
-    title: "Video Editing",
-    icon: Briefcase,
-    image: "/images/_DSC9134.jpg",
-    description: "Turn raw clips into polished, engaging stories",
-  },
-  {
     id: "web",
     title: "Web Design",
     icon: Briefcase,
-    image: "/images/web  2.jpg",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
     description: "Build modern, responsive websites that reflect your brand",
   },
-];
-
-const featuredWork = [
   {
-    id: 1,
-    image: "/images/couples2.png",
-    title: "Wedding Celebration",
-    category: "Events & Weddings",
-  },
-  {
-    id: 2,
-    image: "/images/_DSC1142.jpg",
-    title: "Professional Photography",
-    category: "Product Photography",
-  },
-  {
-    id: 3,
-    image: "/images/_DSC9169.jpg",
-    title: "Creative Studio Services",
-    category: "Video Editing",
-  },
-  {
-    id: 4,
-    image: "/images/_DSC7999.jpg",
-    title: "Maternity & Newborn",
-    category: "Maternity & Newborn",
+    id: "instant",
+    title: "Instant Photo Download",
+    icon: Users,
+    image: "/images/couples3.png",
+    description: "Let guests view and download photos instantly during the event",
   },
 ];
-
 
 export function Home() {
   return (
@@ -78,7 +50,7 @@ export function Home() {
         <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
           <div className="absolute inset-0 w-full h-full">
             <ImageWithFallback
-              src="/images/_DSC9134.jpg"
+              src="/images/_DSC1142.jpg"
               alt="Professional Photography Studio"
               className="w-full h-full object-cover object-center object-[center_top]"
               loading="eager"
@@ -131,8 +103,8 @@ export function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.slice(0, 3).map((category) => (
-              <Link to="/portfolio" key={category.id}>
-                <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
+              <Link to="/portfolio" key={category.id} className="h-full">
+                <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300 h-full flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden">
                     <ImageWithFallback
                       src={category.image}
@@ -142,89 +114,47 @@ export function Home() {
                       fetchPriority="low"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-10 h-10 rounded-lg bg-[#F2C94C]/10 flex items-center justify-center">
                         <category.icon className="w-5 h-5 text-[#F2C94C]" />
                       </div>
                       <h3 className="text-2xl text-white">{category.title}</h3>
                     </div>
-                    <p className="text-white/60">{category.description}</p>
+                    <p className="text-white/60 flex-1">{category.description}</p>
                   </div>
                 </Card>
               </Link>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {categories.slice(3, 5).map((category) => (
-              <Link to="/portfolio" key={category.id}>
-                <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithFallback
-                      src={category.image}
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      fetchPriority="low"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-lg bg-[#F2C94C]/10 flex items-center justify-center">
-                        <category.icon className="w-5 h-5 text-[#F2C94C]" />
+          <div className="flex justify-center mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full lg:w-[calc(66.666%-1rem)]">
+              {categories.slice(3, 5).map((category) => (
+                <Link to="/portfolio" key={category.id} className="h-full">
+                  <Card className="group relative overflow-hidden rounded-2xl border-white/10 bg-[#1A1A1A] hover:border-[#F2C94C]/50 transition-all duration-300 h-full flex flex-col">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <ImageWithFallback
+                        src={category.image}
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                        fetchPriority="low"
+                      />
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-lg bg-[#F2C94C]/10 flex items-center justify-center">
+                          <category.icon className="w-5 h-5 text-[#F2C94C]" />
+                        </div>
+                        <h3 className="text-2xl text-white">{category.title}</h3>
                       </div>
-                      <h3 className="text-2xl text-white">{category.title}</h3>
+                      <p className="text-white/60 flex-1">{category.description}</p>
                     </div>
-                    <p className="text-white/60">{category.description}</p>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Work */}
-      <section className="py-24 px-6 lg:px-8 bg-[#0D0D0D]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white">Our Creative Expertise</h2>
-            <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Professional photography that captures your perfect moments
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredWork.map((work) => (
-              <Link to="/portfolio" key={work.id}>
-                <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-[#F2C94C]/20 transition-all duration-300">
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <ImageWithFallback
-                      src={work.image}
-                      alt={work.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      fetchPriority="low"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-sm text-[#F2C94C] mb-1">{work.category}</p>
-                      <h3 className="text-xl text-white">{work.title}</h3>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/portfolio">
-              <Button size="lg" className="bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D]">
-                View Full Portfolio
-              </Button>
-            </Link>
+                  </Card>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -251,3 +181,4 @@ export function Home() {
     </div>
   );
 }
+

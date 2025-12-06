@@ -228,22 +228,6 @@ export function Contact() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section id="more-info" className="py-24 px-6 lg:px-8 bg-[#0D0D0D] border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl mb-8 text-white text-center">For More Information</h2>
-          <div className="rounded-2xl overflow-hidden shadow-2xl h-[500px] bg-[#1A1A1A] flex items-center justify-center border border-white/10">
-            <div className="text-center p-12">
-              <h3 className="text-3xl text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4 text-white/80 text-lg">
-                <p><strong>Phone:</strong> +61 469770248</p>
-                <p><strong>Email:</strong> durgojiraosofficial@gmail.com</p>
-                <p><strong>Website:</strong> www.durgojistudios.com.au</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
