@@ -35,9 +35,28 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for contacting us! We'll get back to you soon.");
+    
+    // Create email subject
+    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+    
+    // Create email body with form data
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'Not provided'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    // Create mailto link
+    const mailtoLink = `mailto:durgojiraosofficial@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show confirmation message
+    alert("Thank you for contacting us! Your email client will open with the message. Please send it to complete your submission.");
+    
+    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 

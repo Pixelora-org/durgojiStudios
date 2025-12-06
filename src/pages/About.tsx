@@ -109,7 +109,7 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="overflow-hidden rounded-2xl shadow-2xl">
               <ImageWithFallback
-                src="/images/_DSC9572.jpg"
+                src="/images/_DSC9134.jpg"
                 alt="Professional Photographer"
                 className="w-full h-[600px] object-cover"
                 loading="lazy"
@@ -184,7 +184,7 @@ export function About() {
             </div>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <ImageWithFallback
-                src="/images/_DSC0461.jpg"
+                src="/images/_DSC7999.jpg"
                 alt="On location shoot"
                 className="w-full h-80 object-cover"
                 loading="lazy"
@@ -193,7 +193,7 @@ export function About() {
             </div>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <ImageWithFallback
-                src="/images/_DSC0520.jpg"
+                src="/images/_DSC9169.jpg"
                 alt="Equipment and gear"
                 className="w-full h-80 object-cover"
                 loading="lazy"

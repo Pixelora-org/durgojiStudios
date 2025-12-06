@@ -43,30 +43,6 @@ const portfolioImages = [
     title: "TV Show Behind Scenes",
   },
   {
-    id: 7,
-    src: "/images/_DSC5811.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 8,
-    src: "/images/_DSC8145.jpg",
-    category: "Photography",
-    title: "Studio Photography",
-  },
-  {
-    id: 9,
-    src: "/images/_DSC8211.jpg",
-    category: "TV Show",
-    title: "TV Show Set",
-  },
-  {
-    id: 10,
-    src: "/images/_DSC8234.jpg",
-    category: "Photography",
-    title: "Professional Portrait",
-  },
-  {
     id: 11,
     src: "/images/_DSC9134.jpg",
     category: "Photography",
@@ -81,24 +57,6 @@ const portfolioImages = [
   {
     id: 13,
     src: "/images/_DSC9201.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 14,
-    src: "/images/_DSC9572.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 15,
-    src: "/images/_DSC0461.jpg",
-    category: "Photography",
-    title: "Professional Photography",
-  },
-  {
-    id: 16,
-    src: "/images/_DSC0520.jpg",
     category: "Photography",
     title: "Professional Photography",
   },

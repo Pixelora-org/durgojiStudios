@@ -9,7 +9,7 @@ const services = [
     id: 1,
     title: "Events & Weddings Shooting",
     icon: Heart,
-    image: "/images/_DSC0520.jpg",
+    image: "/images/couples.png",
     description: "Candid, cinematic, and emotional storytelling of your big day. Capture cinematic moments with creative lighting and motion.",
     features: [
       "Full event coverage",
@@ -51,7 +51,7 @@ const services = [
     id: 4,
     title: "Video Editing",
     icon: Home,
-    image: "/images/_DSC8145.jpg",
+    image: "/images/_DSC7999.jpg",
     description: "Turn raw clips into polished, engaging stories.",
     features: [
       "Professional color grading",
@@ -65,7 +65,7 @@ const services = [
     id: 5,
     title: "Instant Photo Download",
     icon: Users,
-    image: "/images/_DSC8211.jpg",
+    image: "/images/_DSC9169.jpg",
     description: "Let guests view and download photos instantly during the event.",
     features: [
       "Real-time photo upload",
@@ -79,7 +79,7 @@ const services = [
     id: 6,
     title: "Live Streaming of Events",
     icon: Briefcase,
-    image: "/images/_DSC8234.jpg",
+    image: "/images/_DSC9201.jpg",
     description: "Broadcast your special moments in real time with professional quality.",
     features: [
       "HD quality streaming",

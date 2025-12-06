@@ -9,7 +9,7 @@ const categories = [
     id: "wedding",
     title: "Events & Weddings",
     icon: Heart,
-    image: "/images/_DSC0520.jpg",
+    image: "/images/couples.png",
     description: "Candid, cinematic, and emotional storytelling of your big day",
   },
   {
@@ -30,7 +30,7 @@ const categories = [
     id: "video",
     title: "Video Editing",
     icon: Briefcase,
-    image: "/images/_DSC0461.jpg",
+    image: "/images/_DSC9134.jpg",
     description: "Turn raw clips into polished, engaging stories",
   },
   {
@@ -57,7 +57,7 @@ const featuredWork = [
   },
   {
     id: 3,
-    image: "/images/_DSC5811.jpg",
+    image: "/images/_DSC9169.jpg",
     title: "Creative Studio Services",
     category: "Video Editing",
   },
