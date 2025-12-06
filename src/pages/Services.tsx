@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
-import { Heart, Users, Camera, Home, Briefcase, Check } from "lucide-react";
+import { Heart, Users, Camera, Briefcase, Check } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const services = [
