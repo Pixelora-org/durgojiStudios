@@ -4,7 +4,13 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Card } from "../components/ui/card";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle2, XCircle, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_ka7snfb";
+const EMAILJS_TEMPLATE_ID = "template_diof797";
+const EMAILJS_PUBLIC_KEY = "s28GDDSCwYC1fNEww";
 
 export function Contact() {
   const location = useLocation();
@@ -14,6 +20,9 @@ export function Contact() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error" | null; message: string }>({ type: null, message: "" });
+
 
   useEffect(() => {
     // Handle scroll to anchor when page loads with hash
@@ -33,31 +42,73 @@ export function Contact() {
     }
   }, [location]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create email subject
-    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
-    
-    // Create email body with form data
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone || 'Not provided'}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    
-    // Create mailto link
-    const mailtoLink = `mailto:durgojiraosofficial@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show confirmation message
-    alert("Thank you for contacting us! Your email client will open with the message. Please send it to complete your submission.");
-    
-    // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    // Check if EmailJS credentials are configured
+    if (
+      EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID" ||
+      EMAILJS_TEMPLATE_ID === "YOUR_TEMPLATE_ID" ||
+      EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY"
+    ) {
+      setSubmitStatus({
+        type: "error",
+        message: "Email service is not configured. Please contact the website administrator.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      // Prepare template parameters - matching your EmailJS template exactly
+      const templateParams = {
+        title: "Contact Form Submission",
+        name: formData.name,
+        from_name: formData.name,
+        email: formData.email,
+        phone: formData.phone || "Not provided",
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      };
+
+      // Send email using EmailJS
+      // Pass public key as 4th parameter (recommended for @emailjs/browser v4+)
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      // Success
+      setSubmitStatus({
+        type: "success",
+        message: "Thank you for contacting us! We'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error: any) {
+      // Better error handling
+      let errorMessage = "Sorry, there was an error sending your message. Please try again or contact us directly at durgojiraosofficial@gmail.com";
+      
+      if (error?.status === 412 || error?.statusText === "Precondition Failed") {
+        errorMessage = "Email service configuration error. Please check: 1) Service is connected in EmailJS dashboard, 2) Template variables match exactly, 3) Service is active.";
+      } else if (error?.text) {
+        errorMessage = `Error: ${error.text}`;
+      } else if (error?.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      setSubmitStatus({
+        type: "error",
+        message: errorMessage,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -149,12 +200,43 @@ export function Contact() {
                     placeholder="Tell us about your photography needs..."
                   />
                 </div>
+                {submitStatus.type && (
+                  <div
+                    className={`p-5 rounded-2xl flex items-start gap-4 animate-in fade-in slide-in-from-top-2 duration-300 ${
+                      submitStatus.type === "success"
+                        ? "bg-green-500/10 text-green-300 border-2 border-green-500/40 shadow-lg shadow-green-500/10"
+                        : "bg-red-500/10 text-red-300 border-2 border-red-500/40 shadow-lg shadow-red-500/10"
+                    }`}
+                  >
+                    {submitStatus.type === "success" ? (
+                      <CheckCircle2 className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" />
+                    ) : (
+                      <XCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" />
+                    )}
+                    <div className="flex-1">
+                      <p className={`font-semibold mb-1 ${
+                        submitStatus.type === "success" ? "text-green-300" : "text-red-300"
+                      }`}>
+                        {submitStatus.type === "success" ? "Message Sent Successfully!" : "Error Sending Message"}
+                      </p>
+                      <p className="text-sm opacity-90">{submitStatus.message}</p>
+                    </div>
+                  </div>
+                )}
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D] py-6"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#F2C94C] hover:bg-[#F2C94C]/90 text-[#0D0D0D] py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </div>

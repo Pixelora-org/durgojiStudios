@@ -104,7 +104,7 @@ export function ImageWithFallback({
           alt={alt || ''}
           className={`${className ?? ''} ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
           loading={loading}
-          fetchPriority={fetchPriority}
+          fetchpriority={fetchPriority}
           decoding="async"
           width={typeof width === 'number' ? width : undefined}
           height={typeof height === 'number' ? height : undefined}
